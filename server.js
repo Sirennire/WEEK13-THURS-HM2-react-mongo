@@ -22,9 +22,14 @@ app.use(
 app.use(express.static("public"));
 
 mongoose.Promise = Promise;
-mongoose.connect("mongodb://localhost/newsdb", {
-  useMongoClient: true
-});
+mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://localhost/newsdb",
+    {
+      useMongoClient: true
+    }
+  );
+
+
 
 require("./routes/api-routes.js")(app);
 //require("./routes/html-routes.js")(app);
