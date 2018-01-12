@@ -10,7 +10,7 @@ const ItemCard = props => (
     <div className="content">
       <ul>
         <li className="title-with-text">
-          <strong><a href={props.link}>{props.title}</a></strong>
+          <strong><a href={'https://news.blizzard.com' + props.link}>{props.title}</a></strong>
         </li>
         <li className="block-with-text">
           <strong>{props.summary}</strong>

@@ -24,7 +24,7 @@ module.exports = ((app)=> {
             .find("h3")
             .text();
 
-            result.link = "https://news.blizzard.com" + $(this)
+            result.link = $(this)
               .children("a")
               .attr("href");
 
