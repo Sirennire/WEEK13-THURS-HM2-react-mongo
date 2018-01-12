@@ -24,7 +24,7 @@ module.exports = ((app)=> {
             .find("h3")
             .text();
 
-            result.link = $(this)
+            result.link = "https://news.blizzard.com" + $(this)
               .children("a")
               .attr("href");
 
@@ -41,13 +41,14 @@ module.exports = ((app)=> {
             .then(function(dbArticle) {
             resultsArr.push(dbArticle);
               //console.log("array here" + resultsArr);
-              res.json(resultsArr);
+
               //resultsArr.empty();
             }).catch(function(err) {
               res.json(err);
             });
 
           });
+          res.json(resultsArr);
         });
       });
 
