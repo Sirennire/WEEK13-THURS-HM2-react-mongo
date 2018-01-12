@@ -1,0 +1,10 @@
+
+* {
+	box-sizing: border-box;
+}
+
+.container {
+    width: 25%;
+    color: white;
+    min-height: 100%;
+}

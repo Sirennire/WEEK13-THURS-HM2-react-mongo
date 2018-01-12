@@ -1,0 +1,124 @@
+
+* {
+	box-sizing: border-box;
+}
+.card {
+    background: black;
+    color: #ECEFF1;
+    border-radius: 2px;
+    height: 325px;
+    margin: 1rem;
+    position: relative;
+    width: 325px;
+    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+    text-align: left;
+  }
+  
+  .card > .img-container {
+    height: 50%;
+    overflow: hidden;
+    text-align: center;
+    background:#6CADDC;
+  }
+  .card > .img-container > img {
+    width: 100%
+  }
+  
+  .card > .content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 15px;
+
+  }
+  
+  .card > .content > ul {
+    list-style-type: none;
+  }
+  
+  .card > .content > ul > li {
+    margin-top: 18px;
+
+  }
+  
+  .card > .remove {
+    color: #ff1744;
+    font-size: 48px;
+    position: absolute;
+    top: -20px;
+    right: 5px;
+    cursor: pointer;
+  }
+  
+  .card > .remove:hover {
+    color: #d50000;
+  }
+
+  .title-with-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: .5em;
+  }
+
+  .block-with-text {
+        /* hide text if it more than N lines  */
+        overflow: hidden;
+        /* for set '...' in absolute position */
+        position: relative; 
+        /* use this value to count block height */
+        line-height: 1.2em;
+        /* max-height = line-height (1.2) * lines max number (3) */
+        max-height: 3.6em; 
+        /* fix problem when last visible word doesn't adjoin right side  */
+        text-align: justify;  
+        /* place for '...' */
+        margin-right: .10em;
+        padding-right: 1em;
+        padding-left: .5em;
+      }
+      /* create the ... */
+      .block-with-text:before {
+        /* points in the end */
+        content: '...';
+        /* absolute position */
+        position: absolute;
+        /* set position to right bottom corner of block */
+        right: 0;
+        bottom: 0;
+        
+      }
+      /* hide ... if we have text, which is less than or equal to max lines */
+      .block-with-text:after {
+        /* points in the end */
+        content: '';
+        /* absolute position */
+        position: absolute;
+        /* set position to right bottom corner of text */
+        right: 0;
+        /* set width and height */
+        width: 1em;
+        height: 1em;
+        margin-top: 0.2em;
+        /* bg color = bg color under block */
+        background: black;
+      }
+  
+      .comments {
+          text-decoration: underline;
+          position: absolute;
+          bottom: 0;
+          padding-bottom: .5em;
+          padding-left: .5em;
+      }
+
+      .add-comment {
+        text-decoration: underline;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin-right: .10em;
+        padding-right: 1em;
+        padding-left: .5em;
+        padding-bottom: .5em;
+        cursor: pointer;
+      }
