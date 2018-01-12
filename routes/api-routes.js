@@ -122,14 +122,11 @@ module.exports = ((app)=> {
           //Get all articles from database
           app.get("/", function(req, res) {
 
-              db.articles.find({}, function(err, data) {
-                  if (err) {
-                      console.log(error);
-                  } else {
-                    res.render("index", {article: data});
+
+                    res.render("index.html");
 
                   }
-              });
+
           });
 
 });
